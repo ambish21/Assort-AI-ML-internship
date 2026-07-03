@@ -17,7 +17,7 @@ This repository documents my complete internship journey at Assort, including:
 
 ## Internship Information
 
-- Company: Assort
+- Company: Assort-Tech
 - Domain: Artificial Intelligence & Machine Learning
 - Duration: Ongoing
 - Status: In Progress
