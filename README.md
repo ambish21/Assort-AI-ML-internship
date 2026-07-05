@@ -87,5 +87,4 @@ Daily Progress/
 ---
 
 ## Author
-
 Ambish Yaqoob
