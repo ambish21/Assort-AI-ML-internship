@@ -32,3 +32,4 @@ def search(name: str):
     return {
         "student_name": name
     }
+    
