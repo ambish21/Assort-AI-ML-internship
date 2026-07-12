@@ -1,9 +1,6 @@
 # MongoDB Atlas Database Setup
 
 ## What is MongoDB Atlas?
-
-MongoDB Atlas is a cloud-based database service provided by MongoDB. It allows developers to create and manage MongoDB databases without installing MongoDB locally.
-
 ---
 
 ## Tasks Completed
