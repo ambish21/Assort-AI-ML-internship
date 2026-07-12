@@ -1,12 +1,4 @@
-# Day 04 - MongoDB Atlas Setup & FastAPI Integration
-
-## 📌 Topics Covered
-
-- MongoDB Atlas Database Setup
-- MongoDB Architecture
-- MongoDB Atlas vs Local MongoDB
-- MongoDB Compass Connection
-- FastAPI Project Setup
+sect Setup
 - Python Virtual Environment
 - MongoDB Integration with FastAPI
 - Environment Variables (.env)
