@@ -1,0 +1,14 @@
+[
+    {
+        "name": "ALI",
+        "department": "AI",
+        "salary": 20000,
+        "experience": 1
+    },
+    {
+        "name": "AMBISH",
+        "department": "AI",
+        "salary": 200000,
+        "experience": 3
+    }
+]
