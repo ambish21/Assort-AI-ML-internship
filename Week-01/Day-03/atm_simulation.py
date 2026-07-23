@@ -1,89 +1,120 @@
 # -----------------------------------------
 # Day 03 Assignment
-# ATM Simulation
+# ATM Simulation (Improved Version)
 # -----------------------------------------
 
-# Step 1: Store the correct ATM PIN
+# ATM Data
 correct_pin = "1234"
-
-# Step 2: Store the initial account balance
 balance = 5000
+max_attempts = 3
 
-# Display welcome message
 print("===================================")
-print("       WELCOME TO ASSORT TECH ATM")
+print("      WELCOME TO ASSORT TECH ATM")
 print("===================================")
 
-# Step 3: Ask the user to enter the PIN
-pin = input("Enter your 4-digit PIN: ")
+# ----------------------------
+# PIN Verification
+# ----------------------------
+attempt = 0
 
-# Step 4: Verify the PIN
-if pin == correct_pin:
+while attempt < max_attempts:
 
-    print("\nLogin Successful!")
-    print("\n===== ATM MENU =====")
-    print("1. Check Balance")
-    print("2. Deposit Money")
-    print("3. Withdraw Money")
-    print("4. Exit")
+    pin = input("Enter your 4-digit PIN: ")
 
-    # Step 5: Ask the user to choose an option
-    choice = input("\nEnter your choice (1-4): ")
+    if pin == correct_pin:
 
-    # -----------------------------
-    # Option 1 - Check Balance
-    # -----------------------------
-    if choice == "1":
-        print("\nYour Current Balance is: Rs.", balance)
+        print("\nLogin Successful!")
 
-    # -----------------------------
-    # Option 2 - Deposit Money
-    # -----------------------------
-    elif choice == "2":
+        # ----------------------------
+        # ATM Menu
+        # ----------------------------
+        while True:
 
-        deposit = float(input("Enter amount to deposit: Rs. "))
+            print("\n========== ATM MENU ==========")
+            print("1. Check Balance")
+            print("2. Deposit Money")
+            print("3. Withdraw Money")
+            print("4. Exit")
 
-        # Add deposited amount to balance
-        balance = balance + deposit
+            choice = input("\nEnter your choice (1-4): ")
 
-        print("Deposit Successful!")
-        print("Updated Balance: Rs.", balance)
+            match choice:
 
-    # -----------------------------
-    # Option 3 - Withdraw Money
-    # -----------------------------
-    elif choice == "3":
+                # ----------------------------
+                # Check Balance
+                # ----------------------------
+                case "1":
+                    print(f"\nCurrent Balance: Rs. {balance}")
 
-        withdraw = float(input("Enter amount to withdraw: Rs. "))
+                # ----------------------------
+                # Deposit Money
+                # ----------------------------
+                case "2":
 
-        # Check if balance is sufficient
-        if withdraw <= balance:
+                    try:
+                        deposit = float(input("Enter amount to deposit: Rs. "))
 
-            balance = balance - withdraw
+                        if deposit <= 0:
+                            print("Invalid amount! Deposit must be greater than 0.")
 
-            print("Withdrawal Successful!")
-            print("Remaining Balance: Rs.", balance)
+                        else:
+                            balance += deposit
+                            print("Deposit Successful!")
+                            print(f"Updated Balance: Rs. {balance}")
+
+                    except ValueError:
+                        print("Invalid input! Please enter numbers only.")
+
+                # ----------------------------
+                # Withdraw Money
+                # ----------------------------
+                case "3":
+
+                    try:
+                        withdraw = float(input("Enter amount to withdraw: Rs. "))
+
+                        if withdraw <= 0:
+                            print("Invalid amount! Withdrawal must be greater than 0.")
+
+                        elif withdraw > balance:
+                            print("Insufficient Balance!")
+
+                        else:
+                            balance -= withdraw
+                            print("Withdrawal Successful!")
+                            print(f"Remaining Balance: Rs. {balance}")
+
+                    except ValueError:
+                        print("Invalid input! Please enter numbers only.")
+
+                # ----------------------------
+                # Exit
+                # ----------------------------
+                case "4":
+                    print("\nThank you for using Assort Tech ATM.")
+                    print("Have a Nice Day!")
+                    break
+
+                # ----------------------------
+                # Invalid Choice
+                # ----------------------------
+                case _:
+                    print("Invalid Choice! Please select between 1 and 4.")
+
+        # Exit the PIN loop after user exits ATM
+        break
+
+    else:
+        attempt += 1
+        remaining = max_attempts - attempt
+
+        if remaining > 0:
+            print(f"Incorrect PIN! Attempts left: {remaining}")
 
         else:
-            print("Insufficient Balance!")
-
-    # -----------------------------
-    # Option 4 - Exit
-    # -----------------------------
-    elif choice == "4":
-        print("Thank you for using Python ATM.")
-
-    # -----------------------------
-    # Invalid Menu Option
-    # -----------------------------
-    else:
-        print("Invalid Choice!")
-
-# Step 6: If PIN is incorrect
-else:
-    print("Incorrect PIN!")
-    print("Access Denied!")
+            print("\nToo many incorrect attempts!")
+            print("Your account has been temporarily locked.")
 
 print("\n===================================")
-print("Thank You!")
+print("         THANK YOU")
 print("===================================")
