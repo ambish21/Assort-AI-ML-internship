@@ -39,7 +39,7 @@ Daily Progress/
 
 ---
 
-## Skills I'm Learning
+## Skills I'm Learning 
 
 - Python
 - Machine Learning
@@ -55,6 +55,37 @@ Daily Progress/
 - Git & GitHub
 
 ---
+## Description 
+Bootcamp Goal:
+
+Understand how AI applications are actually built in industry.
+
+Write Python confidently.
+
+Build REST APIs using Node.js.
+
+Use MongoDB professionally.
+
+Understand how LLMs and RAG systems work.
+
+Build one complete AI project from scratch.
+
+Work with Git and real development practices.
+
+Present a portfolio project at the end.
+
+5 working days per week (40 working days) with 6–7 hours/day.
+
+A good daily structure would be:
+
+1 hour – Theory
+
+2 hours – Coding
+
+2 hours – Practical assignment
+
+1 hour – Review, debugging, Git commits
+
 
 ## Weekly Progress
 
