@@ -1,16 +1,21 @@
-# string_utils.py
+def uppercase(text):
 
-def to_upper(text):
     return text.upper()
 
 
-def to_lower(text):
+
+def lowercase(text):
+
     return text.lower()
 
 
+
 def reverse(text):
+
     return text[::-1]
 
 
-def count_characters(text):
+
+def count(text):
+
     return len(text)
