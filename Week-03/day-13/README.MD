@@ -1,23 +1,43 @@
-# Day 13
+# Day 13 - Python Advanced Functions
 
-## Topics
+## Topics Covered
 
 - Lambda Functions
 - map()
 - filter()
 - reduce()
-- List Comprehension
+- List Comprehensions
 
 ## Assignment
 
 Student Analytics System
 
-## Learned
+## Concepts Used
 
-✔ Functional Programming
+- Functions
+- Lambda Expressions
+- Functional Programming
+- Lists
+- Dictionaries
+- List Comprehensions
+- Data Processing
 
-✔ Anonymous Functions
+## Learning Outcome
 
-✔ Data Processing
+✔ Learned anonymous functions
 
-✔ Pythonic Coding
+✔ Applied map(), filter(), reduce()
+
+✔ Created reports using Python
+
+✔ Improved Python coding style
+
+## Folder Structure
+
+practice/
+assignment/
+screenshots/
+
+## Author
+
+Ambish Yaqoob
