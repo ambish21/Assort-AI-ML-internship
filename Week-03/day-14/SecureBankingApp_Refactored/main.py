@@ -31,77 +31,73 @@ def main():
 
         try:
 
-            choice = input("Enter your choice: ")
+            choice = int(input("Enter your choice: "))
 
-            if choice == "1":
+            match choice:
 
-                account_no = input("Enter Account Number: ").strip()
+                case 1:
 
-                name = input("Enter Account Holder Name: ").strip()
+                    account_no = input("Enter Account Number: ").strip()
+                    name = input("Enter Account Holder Name: ").strip()
+                    balance = float(input("Enter Initial Balance: "))
 
-                balance = float(input("Enter Initial Balance: "))
+                    bank.create_account(account_no, name, balance)
 
-                bank.create_account(account_no, name, balance)
+                case 2:
 
-            elif choice == "2":
+                    account_no = input("Enter Account Number: ").strip()
+                    amount = float(input("Enter Deposit Amount: "))
 
-                account_no = input("Enter Account Number: ").strip()
+                    bank.deposit(account_no, amount)
 
-                amount = float(input("Enter Deposit Amount: "))
+                case 3:
 
-                bank.deposit(account_no, amount)
+                    account_no = input("Enter Account Number: ").strip()
+                    amount = float(input("Enter Withdraw Amount: "))
 
-            elif choice == "3":
+                    bank.withdraw(account_no, amount)
 
-                account_no = input("Enter Account Number: ").strip()
+                case 4:
 
-                amount = float(input("Enter Withdraw Amount: "))
+                    sender = input("Enter Sender Account: ").strip()
+                    receiver = input("Enter Receiver Account: ").strip()
+                    amount = float(input("Enter Transfer Amount: "))
 
-                bank.withdraw(account_no, amount)
+                    bank.transfer(sender, receiver, amount)
 
-            elif choice == "4":
+                case 5:
 
-                sender = input("Enter Sender Account: ").strip()
+                    account_no = input("Enter Account Number: ").strip()
 
-                receiver = input("Enter Receiver Account: ").strip()
+                    bank.check_balance(account_no)
 
-                amount = float(input("Enter Amount: "))
+                case 6:
 
-                bank.transfer(sender, receiver, amount)
+                    bank.display_accounts()
 
-            elif choice == "5":
+                case 7:
 
-                account_no = input("Enter Account Number: ").strip()
+                    account_no = input("Enter Account Number: ").strip()
 
-                bank.check_balance(account_no)
+                    bank.delete_account(account_no)
 
-            elif choice == "6":
+                case 8:
 
-                bank.display_accounts()
+                    logger.info("Application Closed")
 
-            elif choice == "7":
+                    print("\nThank you for using Secure Banking System.")
 
-                account_no = input("Enter Account Number: ").strip()
+                    break
 
-                bank.delete_account(account_no)
+                case _:
 
-            elif choice == "8":
+                    logger.warning("Invalid Menu Choice")
 
-                logger.info("Application Closed")
-
-                print("\nThank you for using Secure Banking System.")
-
-                break
-
-            else:
-
-                logger.warning("Invalid Menu Choice")
-
-                print("Invalid Choice! Try Again.")
+                    print("Invalid Choice! Please try again.")
 
         except ValueError:
 
-            logger.exception("ValueError: Invalid Numeric Input")
+            logger.exception("Invalid Numeric Input")
 
             print("Please enter a valid number.")
 
