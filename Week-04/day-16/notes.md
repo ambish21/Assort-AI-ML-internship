@@ -1,4 +1,5 @@
 Day 16 — MongoDB Fundamentals 📝
+
 1. NoSQL
 
 NoSQL means Not Only SQL.
@@ -11,7 +12,7 @@ MongoDB is a document-based NoSQL database.
 
 It stores data in JSON-like documents and provides a flexible schema.
 
-3. Database
+3. Database 
 
 A database is a group of related collections.
 
@@ -89,6 +90,6 @@ Students
 Document
     ↓
 name, age, marks
-⭐ Day 16 — Core Concept
 
+ Day 16 — Core Concept
 MongoDB → Database → Collection → Document → Fields
